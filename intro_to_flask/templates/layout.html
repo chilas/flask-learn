@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">Flask App</h1>
+        <nav>
+
+            <ul class="menu">
+                <li><strong><a href="{{ url_for('home') }}">Home</a> </strong></li>
+                <li><strong><a href="{{ url_for('about') }}">About</a></strong></li>
+                <li><strong><a href="{{ url_for('contact') }}">Contact</a></strong></li>
+                {% if current_user.is_authenticated() %}
+                    <li><strong><a href="{{ url_for('profile') }}">Profile</a></strong></li>
+                    <li><strong><a href="{{ url_for('signout') }}">Sign out</a></strong></li>
+                {% else %}
+                    <li><strong><a href="{{ url_for('signup') }}">Sign up</a></strong></li>
+                    <li><strong><a href="{{ url_for('signin') }}">Sign in</a></strong></li>
+                {% endif %}
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
