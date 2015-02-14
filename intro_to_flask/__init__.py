@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 # app configuration
@@ -10,8 +11,8 @@ MAIL_PORT = 465
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'princechilas@gmail.com'
 MAIL_PASSWORD = 'thisemailisnotsecure'
-SQLALCHEMY_DATABASE_URI = 'mysql://bdccdab7e8dcdb:356f0a62@mysql://localhost/flask-learn'
-
+# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:toor@localhost/development'
+SQLALCHEMY_DATABASE_URI = os.get.env('DATABASE_URL')
 # initialize app
 app = Flask(__name__)
 app.config.from_object(__name__)
