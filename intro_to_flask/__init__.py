@@ -12,7 +12,7 @@ MAIL_PORT = 465
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'princechilas@gmail.com'
 MAIL_PASSWORD = 'thisemailisnotsecure'
-# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:toor@localhost/development'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:toor@localhost/development'
 # SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
 # initialize app
 app = Flask(__name__)
