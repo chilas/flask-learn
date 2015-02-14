@@ -6,7 +6,7 @@ SECRET_KEY = '0pnhGcFrESXcYrmbmJKw7c7SZZ5^C2EjOagod' \
              'AyDuuX#XSMHztSAszBN6YYfex@eKM99CzyOYd!' \
              'LN6#S$lF2y0RBfgZOH@gsLv4b'
 DEBUG = True
-HOST = '0.0.0.0'
+# HOST = '0.0.0.0'
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465
 MAIL_USE_SSL = True
