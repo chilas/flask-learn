@@ -13,7 +13,9 @@ MAIL_USE_SSL = True
 MAIL_USERNAME = 'princechilas@gmail.com'
 MAIL_PASSWORD = 'thisemailisnotsecure'
 # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:toor@localhost/development'
-SQLALCHEMY_DATABASE_URI = str(os.getenv('CLEARDB_DATABASE_URL'))
+# SQLALCHEMY_DATABASE_URI = os.getenv('CLEARDB_DATABASE_URL')
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://bdccdab7e8dcdb:356f0a62@us-cdbr-iron-east-01.cleardb.net' \
+                          '/heroku_0e6459298234bbe'
 # initialize app
 app = Flask(__name__)
 app.config.from_object(__name__)
