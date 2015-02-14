@@ -10,7 +10,7 @@ MAIL_PORT = 465
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'princechilas@gmail.com'
 MAIL_PASSWORD = 'thisemailisnotsecure'
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:toor@localhost/development'
+SQLALCHEMY_DATABASE_URI = 'mysql://bdccdab7e8dcdb:356f0a62@mysql://localhost/flask-learn'
 
 # initialize app
 app = Flask(__name__)
