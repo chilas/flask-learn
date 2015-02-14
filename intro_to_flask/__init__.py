@@ -32,6 +32,3 @@ mail.init_app(app)
 # db setup
 from models import db
 db.init_app(app)
-
-with app.app_context():
-    db.create_all()
