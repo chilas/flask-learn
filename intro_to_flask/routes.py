@@ -97,6 +97,7 @@ def profile():
     else:
         return render_template('profile.html')
 
+
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if current_user is not None:
