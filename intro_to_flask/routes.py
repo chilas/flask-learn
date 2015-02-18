@@ -100,9 +100,6 @@ def profile():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
-    if current_user is not None:
-        return redirect(url_for('profile'))
-
     form = SigninForm()
 
     if request.method == 'POST':
@@ -115,6 +112,8 @@ def signin():
             login_user(user, remember=True)
             return redirect(url_for('profile'))
     elif request.method == 'GET':
+        if current_user.is_authenticated():
+            return redirect(url_for('profile'))
         return render_template('signin.html', form=form)
 
 
