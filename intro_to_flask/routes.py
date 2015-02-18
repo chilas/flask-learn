@@ -99,8 +99,8 @@ def profile():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
-    if not login_manager.anonymous_user:
-        return redirect(url_for(profile))
+    if current_user is not None:
+        return redirect(url_for('profile'))
 
     form = SigninForm()
 
