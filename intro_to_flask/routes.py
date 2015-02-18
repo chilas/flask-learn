@@ -99,6 +99,9 @@ def profile():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
+    if current_user:
+        return redirect(url_for(profile))
+
     form = SigninForm()
 
     if request.method == 'POST':
