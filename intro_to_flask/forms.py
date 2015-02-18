@@ -84,9 +84,5 @@ class SigninForm(Form):
         if user and user.check_password(self.password.data):
             return True
         else:
-            self.email.errors.append("Invalid email or password"
-                                     " pass: %s"
-                                     " dbpass: %s",
-                                     user.pwdhash,
-                                     self.password.data)
+            self.email.errors.append("Invalid email or password")
             return False
